@@ -1,4 +1,3 @@
-```md
 # Food in NL
 
 ## Project Overview
@@ -52,9 +51,7 @@ I usually start with:
 Example:
 
 ```
-
 We have chicken thighs, spinach, and potatoes. What can we make? Grilling is an option.
-
 ```
 
 ---
@@ -64,19 +61,15 @@ We have chicken thighs, spinach, and potatoes. What can we make? Grilling is an 
 Start broad → narrow down → finalize:
 
 ```
-
 Give me 5 options.
-
-```
 ```
 
+```
 Let's do the chicken one.
-
-```
 ```
 
+```
 Give me just the recipe with exact amounts next to each step.
-
 ```
 
 ---
@@ -86,19 +79,15 @@ Give me just the recipe with exact amounts next to each step.
 Add or correct information incrementally:
 
 ```
-
 We also have potatoes.
-
-```
 ```
 
+```
 No yogurt.
-
-```
 ```
 
+```
 We do have mustard.
-
 ```
 
 ---
@@ -125,14 +114,11 @@ Implicit expectation:
 Examples:
 
 ```
-
 Shopping list for beef stroganoff in the Netherlands.
-
-```
 ```
 
+```
 What kind of fish should I buy at Albert Heijn for this?
-
 ```
 
 ---
@@ -140,29 +126,23 @@ What kind of fish should I buy at Albert Heijn for this?
 ## Example Instructions
 
 ```
-
 We have chicken thighs, spinach, and potatoes. What can we make? Grilling is an option.
-
-```
 ```
 
+```
 We don't have yogurt. What should I replace it with in that recipe?
-
-```
 ```
 
+```
 Give me just the recipe with exact amounts next to each step.
-
-```
 ```
 
+```
 We didn't use the potatoes. What's a breakfast idea with potatoes, onions, and parmesan? No eggs.
-
-```
 ```
 
+```
 Shopping list for beef stroganoff in the Netherlands.
-
 ```
 
 ---
@@ -185,19 +165,15 @@ Highly interactive and often real-time during cooking.
 ### In-Flight Corrections
 
 ```
-
 Oops, already used that ingredient.
-
-```
 ```
 
+```
 This looks too dry. How should I adjust the sauce?
-
-```
 ```
 
+```
 We didn't use the potatoes. What can I make with them tomorrow?
-
 ```
 
 ---
@@ -248,33 +224,25 @@ The kitchen state evolves over time, and ChatGPT adapts with it.
 ### Programming
 
 ```
-
 Here is the current state. Here is what changed. What is the next best step?
-
 ```
 
 ### Writing
 
 ```
-
 Draft → refine → constrain → finalize
-
 ```
 
 ### Product / Design
 
 ```
-
 Start vague → add constraints → converge on practical output
-
 ```
 
 ### Data / Analysis
 
 ```
-
 Feed partial inputs → refine query → adjust output
-
 ```
 
 ---
@@ -282,4 +250,3 @@ Feed partial inputs → refine query → adjust output
 ## Core Pattern
 
 > Start broad → constrain aggressively → iterate with real-world feedback → converge on a practical solution.
-```
