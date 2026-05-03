@@ -11,9 +11,9 @@ The project focuses on turning available ingredients, vague meal ideas, and real
 
 Reduce decision fatigue and food waste while improving meal quality by:
 
-- Using what is already in the kitchen  
-- Generating realistic Netherlands-friendly recipes  
-- Producing actionable shopping lists and cooking steps  
+- Using what is already in the kitchen
+- Generating realistic Netherlands-friendly recipes
+- Producing actionable shopping lists and cooking steps
 
 ---
 
@@ -21,20 +21,20 @@ Reduce decision fatigue and food waste while improving meal quality by:
 
 ### Key Use Cases
 
-- Ingredient-driven meal generation  
-- Recipe adaptation to constraints  
-- Translating dishes into Dutch grocery context  
-- Structured recipes and shopping lists  
-- Exploring variations (breakfast, grilling, comfort food)  
-- Live cooking adjustments  
+- Ingredient-driven meal generation
+- Recipe adaptation to constraints
+- Translating dishes into Dutch grocery context
+- Structured recipes and shopping lists
+- Exploring variations (breakfast, grilling, comfort food)
+- Live cooking adjustments
 
 ### Typical Tasks
 
-- Meal ideation  
-- Recipe generation  
-- Substitutions and improvisation  
-- Ingredient clarification  
-- Iterative cooking support  
+- Meal ideation
+- Recipe generation
+- Substitutions and improvisation
+- Ingredient clarification
+- Iterative cooking support
 
 ---
 
@@ -44,10 +44,10 @@ Reduce decision fatigue and food waste while improving meal quality by:
 
 I usually start with:
 
-- Available ingredients  
-- Missing items  
-- Equipment limitations  
-- Local sourcing constraints  
+- Available ingredients
+- Missing items
+- Equipment limitations
+- Local sourcing constraints
 
 Example:
 
@@ -107,10 +107,10 @@ We do have mustard.
 
 Preferred output:
 
-- Exact amounts  
-- Quantities inline with steps  
-- Minimal prep assumptions  
-- Clear substitutions  
+- Exact amounts
+- Quantities inline with steps
+- Minimal prep assumptions
+- Clear substitutions
 
 ---
 
@@ -118,9 +118,9 @@ Preferred output:
 
 Implicit expectation:
 
-- Ingredients available in the Netherlands  
-- Albert Heijn compatibility  
-- Realistic sourcing  
+- Ingredients available in the Netherlands
+- Albert Heijn compatibility
+- Realistic sourcing
 
 Examples:
 
@@ -173,12 +173,12 @@ Highly interactive and often real-time during cooking.
 
 ### Typical Loop
 
-1. Start with available ingredients  
-2. Generate options  
-3. Select a direction  
-4. Convert to recipe  
-5. Adjust during cooking  
-6. Fix issues in-flight  
+1. Start with available ingredients
+2. Generate options
+3. Select a direction
+4. Convert to recipe
+5. Adjust during cooking
+6. Fix issues in-flight
 
 ---
 
@@ -208,11 +208,11 @@ We didn't use the potatoes. What can I make with them tomorrow?
 
 ChatGPT works well as:
 
-- A cooking thinking partner  
-- A constraint solver  
-- A recipe adapter  
-- A shopping-list generator  
-- A way to reduce decision friction  
+- A cooking thinking partner
+- A constraint solver
+- A recipe adapter
+- A shopping-list generator
+- A way to reduce decision friction
 
 Especially useful when the starting point is incomplete.
 
@@ -222,11 +222,11 @@ Especially useful when the starting point is incomplete.
 
 Still requires human validation for:
 
-- Ingredient availability  
-- Portion sizing  
-- Cooking times  
-- Texture and doneness  
-- Visual cues  
+- Ingredient availability
+- Portion sizing
+- Cooking times
+- Texture and doneness
+- Visual cues
 
 ---
 
@@ -234,10 +234,10 @@ Still requires human validation for:
 
 This project can be viewed as:
 
-- Constraint-driven generation  
-- Interactive optimization loop  
-- Human-in-the-loop execution  
-- Stateful improvisation system  
+- Constraint-driven generation
+- Interactive optimization loop
+- Human-in-the-loop execution
+- Stateful improvisation system
 
 The kitchen state evolves over time, and ChatGPT adapts with it.
 
@@ -253,8 +253,6 @@ Here is the current state. Here is what changed. What is the next best step?
 
 ```
 
----
-
 ### Writing
 
 ```
@@ -263,8 +261,6 @@ Draft → refine → constrain → finalize
 
 ```
 
----
-
 ### Product / Design
 
 ```
@@ -272,8 +268,6 @@ Draft → refine → constrain → finalize
 Start vague → add constraints → converge on practical output
 
 ```
-
----
 
 ### Data / Analysis
 
@@ -289,5 +283,3 @@ Feed partial inputs → refine query → adjust output
 
 > Start broad → constrain aggressively → iterate with real-world feedback → converge on a practical solution.
 ```
-
----
