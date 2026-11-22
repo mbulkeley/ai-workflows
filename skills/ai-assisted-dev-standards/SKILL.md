@@ -28,6 +28,40 @@ These apply to every task.
 7. **Fail loudly.** Raise errors and log them. Never swallow an exception or skip a failing step silently.
 8. **Clarity over cleverness.** Small functions that do one job, descriptive names, and code a newcomer can read in six months.
 
+## Before `git init`
+
+These are day-zero decisions. Every one gets harder the longer the repo exists. By the time it has a venv, a direnv allowance and a year of history, moving it is a project rather than a command.
+
+Answer all four before the first commit, and put the answers in the README.
+
+1. **Who owns this?** Me, or my employer? Work built to do my job belongs to my employer even when I started it, on my own time, in my own account. This decides the platform and it is the hardest thing to redecide later.
+2. **Where does it push?** Set the remote in the first session, not "later". A repo with no remote is not version control, it is one copy with undo.
+3. **Whose credentials does it use?** If the answer is mine, it fails the lottery test the day it is written. Anything for work runs on a company-owned service account.
+4. **Is this scratch?** If yes, say so in the README now and set a date to delete it. Unlabelled scratch is what someone ends up depending on.
+
+### The lottery test
+
+For anything built for work: **if I won the lottery tomorrow, could the team find it, run it and change it without me?**
+
+Finding it means the company's own VCS, not a personal account. Running it means company-owned credentials. Changing it means a README saying what it touches and what breaks when it stops.
+
+Code the team can read but cannot run has failed the test just as completely as code they cannot find.
+
+### Commit identity
+
+Key the identity off the remote, not the folder, so it follows the repo wherever it sits on disk:
+
+```
+[includeIf "hasconfig:remote.*.url:**<work-account>/**"]
+        path = ~/.gitconfig-work
+```
+
+Use a no-reply address on anything public. Commit metadata is public and permanent, and it publishes colleagues' addresses alongside mine.
+
+### When the machine is shared
+
+Work laptops are faster and already open, so personal projects end up on them and work projects end up in personal accounts. Both directions are the same mistake. Treat the laptop as a cache, never the only copy, and let the remote decide who owns the work.
+
 ## Match the rigor to the risk
 
 Decide the tier at the start of a task and say which one you're using.
@@ -75,6 +109,8 @@ When a feature works and its tests pass, run a simplify pass before calling it d
 - [ ] Tests pass (shared and production tiers: written first)
 - [ ] Simplify pass done; no debug prints or stray TODOs
 - [ ] Dependencies pinned
+- [ ] Remote set, on the right platform for whoever owns this
+- [ ] Credentials belong to the company, not to me
 - [ ] README covers what it does, how to run it, who owns it and what to do if it breaks
 - [ ] Shared code reviewed by someone other than the author
 - [ ] No customer data in logs, fixtures or prompts
@@ -96,3 +132,5 @@ Read a reference file only when the task involves its topic.
 - "Review this file against ai-assisted-dev-standards and list violations by severity."
 - "Write a failing test that reproduces this bug, then fix it."
 - "Run a simplify pass on this code without changing behavior."
+- "Before I start: walk me through the four questions in Before `git init` for this idea."
+- "Does this pass the lottery test? Tell me what would be missing if I disappeared."
